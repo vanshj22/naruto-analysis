@@ -53,7 +53,7 @@ def classify_text(text_classifcation_model,text_classifcation_data_path,text_to_
     return output
 
 def chat_with_character_chatbot(message, history):
-    character_chatbot = CharacterChatBot("AbdullahTarek/Naruto_Llama-3-8B",
+    character_chatbot = CharacterChatBot("hibernator/Naruto_Llama-3-8B",
                                          huggingface_token = os.getenv('huggingface_token')
                                          )
 
@@ -67,7 +67,7 @@ def main():
         # Theme Classification Section
         with gr.Row():
             with gr.Column():
-                gr.HTML("<h1>Theme Classification (Zero Shot Claasifiers)</h1>")
+                gr.HTML("<h1>Theme Classification (Zero Shot Classifiers)</h1>")
                 with gr.Row():
                     with gr.Column():
                         plot = gr.BarPlot()
